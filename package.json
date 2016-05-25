@@ -1,6 +1,6 @@
 {
   "name": "jrequest",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "jQuery-similar style requests",
   "main": "js/index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "dvbnhbq",
   "license": "ISC",
   "dependencies": {
+    "request": "^2.72.0",
     "source-map-support": "^0.4.0"
   }
 }

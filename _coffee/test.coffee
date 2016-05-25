@@ -1,6 +1,7 @@
-request = require './index.js'
+request = require 'jrequest.js'
 
-request 'http://google.com'
+request.get 
+	url: 'http://google.com'
 .done (data) ->
 	console.log data
 .fail (err) ->
