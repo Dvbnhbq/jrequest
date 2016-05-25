@@ -13,12 +13,17 @@ reqF = function(action, settings, success) {
       if (typeof success === "function") {
         success.apply(null, arguments);
       }
-      return typeof req._done === "function" ? req._done(data) : void 0;
+      if (typeof req._done === "function") {
+        req._done(data);
+      }
     } else if (!err) {
-      return typeof req._fail === "function" ? req._fail(response, data) : void 0;
+      if (typeof req._fail === "function") {
+        req._fail(response, data);
+      }
     }
-  }).on('error', function(err) {
-    return typeof req._fail === "function" ? req._fail(err) : void 0;
+    return typeof req._always === "function" ? req._always(data, err, response) : void 0;
+  }).on('error', function() {
+    return typeof req._fail === "function" ? req._fail.apply(req, arguments) : void 0;
   });
   req.done = function(cb) {
     req._done = cb;
@@ -26,6 +31,10 @@ reqF = function(action, settings, success) {
   };
   req.fail = function(cb) {
     req._fail = cb;
+    return req;
+  };
+  req.always = function(cb) {
+    req._always = cb;
     return req;
   };
   return req;

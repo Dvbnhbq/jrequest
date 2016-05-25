@@ -1,6 +1,6 @@
 {
   "name": "jrequest",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "jQuery-similar style requests",
   "main": "js/index.js",
   "scripts": {

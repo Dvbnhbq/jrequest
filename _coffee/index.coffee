@@ -10,14 +10,18 @@ reqF = (action, settings, success) ->
 			req._done? data 
 		else if !err
 			req._fail? response, data
-	.on 'error', (err) ->
-		req._fail? err
+		req._always? data, err, response
+	.on 'error', ->
+		req._fail? arguments...
 	
 	req.done = (cb) ->
 		req._done = cb
 		req
 	req.fail = (cb) ->
 		req._fail = cb
+		req
+	req.always = (cb) ->
+		req._always = cb
 		req
 	req
 

@@ -1,8 +1,11 @@
-request = require 'jrequest.js'
+request = require 'jrequest'
+#request = require '.'
 
 request.get 
-	url: 'http://google.com'
+	url: 'http://www.google.com'
 .done (data) ->
 	console.log data
-.fail (err) ->
-	console.log "Error",err.statusCode
+.fail (err, data) ->
+	console.log "Error", err.statusCode, data
+.always (data) ->
+	console.log "Always", data
