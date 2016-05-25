@@ -1,0 +1,11 @@
+{
+  "name": "jrequest",
+  "version": "0.0.0",
+  "description": "jQuery-similar style requests",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "node js/test.js"
+  },
+  "author": "dvbnhbq",
+  "license": "ISC"
+}
