@@ -1,6 +1,6 @@
 {
   "name": "jrequest",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "jQuery-similar style requests",
   "main": "js/index.js",
   "scripts": {
@@ -11,5 +11,14 @@
   "dependencies": {
     "request": "^2.72.0",
     "source-map-support": "^0.4.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dvbnhbq/jrequest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dvbnhbq/jrequest/issues"
+  },
+  "homepage": "https://github.com/Dvbnhbq/jrequest#readme"
 }
