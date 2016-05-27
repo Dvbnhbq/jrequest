@@ -18,7 +18,7 @@ reqF = function(action, settings, success) {
       }
     } else if (!err) {
       if (typeof req._fail === "function") {
-        req._fail(response, data);
+        req._fail.apply(req, arguments);
       }
     }
     return typeof req._always === "function" ? req._always(data, err, response) : void 0;

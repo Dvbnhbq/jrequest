@@ -15,7 +15,7 @@ request('http://google.com', function(err, response, body) {
 })
 
 // Overwise
-.fail(function(response, data) {
+.fail(function(err, response, data) {
   return console.log("Error", response.statusCode || response);
 })
 
